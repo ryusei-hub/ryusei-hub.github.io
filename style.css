@@ -35,16 +35,42 @@ a{
     color: aliceblue;
     text-decoration: none;
 }
-.button{
-    font: bold 4vh;
-    font-family: 'Courier New', Courier, monospace;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: rgb(70, 59, 59);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
     text-decoration: none;
-    padding: 20px 16px 20px 16px;
-    border-top: 2px solid #ffe761;
-    border-right: 3px #ffe761;
-    border-bottom: 3px #ffe761;
-    border-left: 3px #ffe761;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00FFB2;
 }
 ul{
     margin: 0px;
+}
+
+#main-content{
+    display: none;
 }
