@@ -1,3 +1,21 @@
-body {
+* {
     background-color: black;
+}
+
+body{
+    color: white;
+}
+
+body > header{
+    color: rgb(93, 93, 198);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    margin: auto;
+    width: 50vw;
+    padding:1vh;
+    text-align: center;
+}
+
+html{
+    font-size: 16px;
 }
