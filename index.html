@@ -7,8 +7,18 @@
     <title>Welcome!</title>
 </head>
 <body>
-    <header>
-        <h1>Who am I?</h1>
-    </header>
+    <div class = "introduction">
+        <h1>Hi, I'm <span class="auto-type"></span></h1>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings: ["dav", "David :)", "a guy that loves to code!"],
+            typeSpeed: 80,
+            backSpeed: 90,
+        })
+    </script>
 </body>
 </html>
