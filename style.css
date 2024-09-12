@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(70, 59, 59);
+    background-color: rgb(54, 49, 49);
 }
 .logo {
     width: auto;
@@ -13,6 +13,7 @@ body{
     display: flex;
     align-items:center;
     justify-content: flex-start;
+    padding-top: 0px;
 }
 
 .logo-image {
@@ -54,7 +55,7 @@ a{
     align-items: center;
     padding: 10px;
     height: auto;
-    background-color: rgb(70, 59, 59);
+    background-color: rgb(61, 61, 61);
     position: fixed;
     width: 100%;
     top: 0;
