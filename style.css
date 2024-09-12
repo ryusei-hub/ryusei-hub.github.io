@@ -6,12 +6,74 @@
 
 body{
     background-color: rgb(54, 49, 49);
+    color: aliceblue;
     background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: auto;
     min-height: 100vh;
 }
-.background-image{
-    position: fixed;
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: auto;
+    width: 70vw;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 15px;
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    transform: translateY(50px);
+    animation: slide-up 1s forwards;
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+    font-weight: bolder;
+    animation: color-change 5s infinite ease-in-out;
+    text-align: center;
+    margin-bottom: 20px;
+}
+@keyframes color-change {
+    0% { color: rgb(240, 240, 230); }
+    25% { color: rgb(255, 215, 100); }
+    75% { color: rgb(240, 240, 230); }
+    100%  { color: rgb(255, 215, 100); }
+}
+#about-me{
+    padding-top: 200px;
+    flex-direction: column;
+}
+.image-pop {
+    border: 1px solid #edf944ce;
+    margin-left: 20px;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.image-pop:hover{
+    transform: scale(1.02);
 }
 .logo {
     width: auto;
@@ -21,7 +83,12 @@ body{
     justify-content: flex-start;
     padding-top: 0px;
 }
-
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: aliceblue;
+    max-width: 50%;
+}
 .logo-image {
     max-width: 60px;
     height: auto;
