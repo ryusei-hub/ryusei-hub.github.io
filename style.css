@@ -13,7 +13,6 @@ body{
     overflow: auto;
     min-height: 100vh;
 }
-
 .about-me-container {
     display: flex;
     align-items: center;
@@ -168,4 +167,68 @@ ul{
 
 .btn{
     padding:0px 30px;
+}
+
+#projects {
+    padding: 40px;
+    background-color: rgba(54, 49, 49, 0.9);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+/*the whole project section*/
+.projects-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+    justify-items: center;
+    align-items: center;
+ 
+}
+
+/*individual project boxes*/
+.project-box {
+    min-width: 450px; /*width of each project box*/
+    background-color: rgba(255, 255, 255, 0.1); /*semi-transparent box background*/
+    padding: 20px;
+    border-radius: 10px; /*rounded corners*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /*animation when hovering*/
+    align-items: center;
+}
+
+.project-box:hover {
+    transform: scale(1.05); /*zoom effect on hover*/
+}
+
+/*image inside the project box*/
+.project-box img {
+    width: 100%; /*ensures the image fits the box*/
+    height: auto;
+    border-radius: 5px; /*rounded corners on the image*/
+}
+
+/*text inside project box */
+.project-box p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.projects-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
