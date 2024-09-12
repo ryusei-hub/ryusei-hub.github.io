@@ -6,6 +6,12 @@
 
 body{
     background-color: rgb(54, 49, 49);
+    background-image: url(background.png);
+    overflow: auto;
+    min-height: 100vh;
+}
+.background-image{
+    position: fixed;
 }
 .logo {
     width: auto;
@@ -32,6 +38,8 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .introduction h1{
