@@ -9,10 +9,9 @@ body{
     color: aliceblue;
     background-image: url(Background.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size:cover;
     overflow: auto;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .scrolling-text{
@@ -291,45 +290,53 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .contact-me-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2%;
     width: 40vw;
     background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 2%;
     transform: translateY(50px);
     animation: slide-up 1s forwards;
     text-align: center;
+    overflow:scroll;
+    scrollbar-width: none;
 }
-/* Tablet and below */
+
 @media (max-width: 1024px) {
     .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: column;
         gap: 10px;
+        padding: 5px;
+        text-align: center;
+        height: auto; /* Dynamic height based on content */
+        position: relative; /* Let the navbar take as little space as needed */
     }
 
     .content-container {
-        flex-direction: column; /* Stack content on smaller screens */
+        flex-direction: column;
         align-items: center;
+        margin-top: 60px; /* Same as the navbar height */
     }
 
     #about-me-container {
-        width: 90vw; /* Adjust the width */
-        margin: 10vh auto; /* Adjust margin for smaller screens */
+        width: 90vw;
+        margin: 10vh auto;
+        padding: 5%;
     }
 
     .image-pop {
-        max-width: 300px; /* Limit image size */
+        max-width: 300px;
     }
 
-    /* Projects section adjustments */
     #projects {
-        width: 90vw; /* Adjust width */
-        height: auto; /* Let height adjust based on content */
+        width: 90vw;
+        height: auto;
     }
 
     .projects-container {
@@ -343,46 +350,83 @@ a{
     }
 }
 
-/* Mobile screens */
+
+/* Mobile screens (up to 768px width) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        padding: 5px;
+        padding: 5px; /* Reduce padding */
+        flex-direction: column; /* Stack navbar items vertically */
+        gap: 5px; /* Reduced gap between items */
         text-align: center;
+        height: auto; /* Dynamic height */
+        position: relative; /* Let the navbar take as little space as needed */
     }
 
-    .content-container {
-        flex-direction: column;
-        align-items: center;
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack navbar links vertically */
+        gap: 5px; /* Reduced space between links */
+        padding: 0;
+        width: 100%; /* Ensure navbar items fill the width */
     }
 
-    #about-me-container {
-        width: 100vw;
+    .navbar .nav-links li {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+
+    .navbar .nav-links a {
+        padding: 10px 0; /* More padding for clickable areas */
+        display: block; /* Make each item fill the width */
+    }
+
+    .scrolling-text h1 {
+        font-size: 50px; /* Smaller font for smaller devices */
+    }
+
+    .projects-container {
+        width: 100%;
         padding: 5%;
-        margin: 10vh auto;
-    }
-
-    .image-pop {
-        max-width: 250px; /* Further reduce image size */
     }
 
     .project-box p {
-        font-size: 0.9rem; /* Smaller text for mobile */
+        font-size: 1rem; /* Smaller text for smaller screens */
     }
 
-    .project-box {
-        width: 100%;
+    .image-pop {
+        max-width: 250px; /* Limit image size further */
     }
 }
 
-/* Small mobile devices */
+/* Small mobile devices (for very small screens) */
 @media (max-width: 480px) {
     .scrolling-text h1 {
         font-size: 40px; /* Smaller font for smaller devices */
     }
 
     .navbar {
-        padding: 3px;
+        padding: 5px; /* Reduce padding */
+        height: auto; /* Let the height be dynamic */
+        flex-direction: column; /* Stack navbar items vertically */
+        gap: 5px; /* Reduce gap between items */
+        text-align: center;
+        position: relative; /* Allow the navbar to take up as little space as needed */
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack navbar links vertically */
+        gap: 5px; /* Reduced space between links */
+        padding: 0;
+        width: 100%; /* Ensure the navbar items stretch across */
+    }
+
+    .navbar .nav-links li {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .navbar .nav-links a {
+        padding: 10px 0; /* More padding for clickable areas */
+        display: block; /* Make each item fill the width */
     }
 
     .projects-container {
@@ -398,3 +442,4 @@ a{
         max-width: 200px; /* Limit image size even further */
     }
 }
+
