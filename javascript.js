@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
         typeSpeed: 80,
         backSpeed: 90,
         onComplete: function() {
-            document.querySelector(".introduction").style.opacity = '0';
-            document.querySelector(".introduction").style.transition = 'visibility 0s 2s, opacity 2s linear';
+            document.querySelector(".scrolling-text").style.opacity = '0';
+            document.querySelector(".scrolling-text").style.transition = 'visibility 0s 2s, opacity 2s linear';
 
             setTimeout(function() {
-                document.querySelector(".introduction").style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
+                document.querySelector(".scrolling-text").style.display = 'none';
+                document.querySelector('.main-content').style.display = 'block';
             }, 1000);
         }
     })
