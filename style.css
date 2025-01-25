@@ -3,15 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: rgb(54, 49, 49);
     color: aliceblue;
     background-image: url(Background.png);
     background-repeat: no-repeat;
     background-size:cover;
+    height: 100vh;
+    background-position: auto center;
     overflow: auto;
-    width: 100%;
 }
 
 .scrolling-text{
@@ -296,7 +296,7 @@ a{
 .contact-me-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2%;
     width: 40vw;
     background-color: rgba(0, 0, 0, 0.5); 
@@ -304,7 +304,7 @@ a{
     transform: translateY(50px);
     animation: slide-up 1s forwards;
     text-align: center;
-    overflow:scroll;
+    overflow-x:scroll;
     scrollbar-width: none;
 }
 
